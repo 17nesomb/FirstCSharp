@@ -11,11 +11,15 @@ namespace FirstCSharp
         static void Main(string[] args)
         {
             Console.WriteLine("How many pizzas would you like to eat? ");
-            int answer = int.Parse(Console.ReadLine()); //Takes an input of the number of pizzas
 
-            for(int i = 0; i < answer; i++) //Iterates for the amount of Pizzas
+            //Takes an input of the number of pizzas
+            int answer = int.Parse(Console.ReadLine());
+
+            //Iterates for the amount of Pizzas
+            for (int i = 0; i < answer; i++) 
             {
-                Console.WriteLine("Eat Pizza number " + (i+1)); // Outputs a new line for every pizza
+                // Outputs a new line for every pizza
+                Console.WriteLine("Eat Pizza number " + (i+1)); 
             }
             
             Console.ReadLine();
