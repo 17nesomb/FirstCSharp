@@ -10,18 +10,36 @@ namespace FirstCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("How many pizzas would you like to eat? ");
+            bool wrong = false;
+            int score = 0;
 
-            //Takes an input of the number of pizzas
-            int answer = int.Parse(Console.ReadLine());
 
-            //Iterates for the amount of Pizzas
-            for (int i = 0; i < answer; i++) 
+            while (wrong == false)
             {
-                // Outputs a new line for every pizza
-                Console.WriteLine("Eat Pizza number " + (i+1)); 
+                Random rnd = new Random();
+                int randomNumber = rnd.Next(0, 3);
+
+
+                Console.WriteLine("Guess a number between 1 and 3: ");
+                int guess = int.Parse(Console.ReadLine());
+
+
+                if (guess == randomNumber)
+                {
+                    Console.WriteLine("You guessed correct!");
+                    score++;
+                }
+                else
+                {
+                    wrong = false;
+                    Console.WriteLine(score + " Points");
+                    Console.WriteLine("__________________________________________________");
+                    score = 0;
+                }
             }
-            
+
+
+
             Console.ReadLine();
         }
     }
